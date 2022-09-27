@@ -13,7 +13,7 @@
 
 //declaracion de variables globales
 
-int calcularPermutacionSinRepeticion(int _Nelemntos, int -Rtamanio);
+int calcularPermutacionSinRepeticion(int _Nelemntos, int _Rtamanio);
 
 using namespace std;
 
@@ -28,7 +28,7 @@ int main(int argc, char const *argv[])
     int controlador3=0; // vairable de control para no permitir  numeros negativos
     int _Nelementos=0;  // variable para guardar la cantidad de elementos del conjutnto (n)
     int _Rtamano=0;     // variable para guardar  el tamaño del arreglo del conjunto (r)
-    
+    int resultado=0;
 
     // inicia ciclo do-while  para control opciones principales    
     do
@@ -108,7 +108,7 @@ int main(int argc, char const *argv[])
                       
                        // llamando a metodo calcular permutacion sin repeticion
                 
-                      int resultado =  calcularPermutacionSinRepeticion(int _Nelementos, int _Rtamano);
+                      resultado =  calcularPermutacionSinRepeticion(_Nelementos,_Rtamano);
                       cout<<"El numero de permutaciones posibles es: "<<resultado<<endl;                
             
                 break;
