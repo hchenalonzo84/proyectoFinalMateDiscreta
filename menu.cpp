@@ -13,20 +13,24 @@
 
 //declaracion de variables globales
 
+int calcularPermutacionSinRepeticion(int _Nelemntos, int -Rtamanio);
+
 using namespace std;
 
 int main(int argc, char const *argv[])
 {
     // declaracion de variables de menu principal
-    int controlador=0;
-    int opcion=0;
-    // declaracion de variables de submenu por  cada caso
-    // int controlador2=0;
-    // int subOpcion=0;
-    int _Nelementos=0;
-    int _Rtamano=0;
-    // inicia ciclo do-while para  opciones principales    
+    int controlador=0; // variable de control apra menu principal de opciones
+    int opcion=0; // varibale para guardar la opcion seleccionada por el usuario
 
+    // declaracion de variables de submenu por  cada caso
+    int controlador2=0; // vairable de control para no permitir  numeros negativos
+    int controlador3=0; // vairable de control para no permitir  numeros negativos
+    int _Nelementos=0;  // variable para guardar la cantidad de elementos del conjutnto (n)
+    int _Rtamano=0;     // variable para guardar  el tamaño del arreglo del conjunto (r)
+    
+
+    // inicia ciclo do-while  para control opciones principales    
     do
     {
         
@@ -67,23 +71,46 @@ int main(int argc, char const *argv[])
      switch (opcion)
             {
             case 1:
-                // do
-                // {
-                    // if (subOpcion)
-                    // {
                       cout<<"------------------------------------------------"<<endl;
                       cout<<"----Seleciono Permunationces sin repeticion-----"<<endl;
                       cout<<"------------------------------------------------"<<endl;
                       cout<<endl;
-                      cout<<"Ingrese la cantidad de elementos N:\t"<<endl;
-                      cin>>_Nelementos;
-                      cout<<"Ingrese el tamaño del arreglo R:\t"<<endl;
-                      cin>>_Rtamano;
-
-                    // }
-                    
-                // } while (/* condition */);
+                      //ciclo de control  para evitar ingresar numeros negativos en (n)
+                      do
+                       {
+                             cout<<"Ingrese numero elementos del conjunto (n):\t"<<endl;
+                             cin>>_Nelementos;
+                             if (_Nelementos>=0)
+                             {
+                                controlador2=1;
+                             }else
+                             {
+                               cout<<"Alerta el numero ingresado deber ser igual o mayor a cero"<<endl;
+                               controlador2=0;
+                               system("PAUSE");
+                             }
+                        } while (controlador2!=1);
+                       //ciclo de control  para evitar ingresar numeros negativos(r)
+                      do
+                       {
+                             cout<<"Ingrese numero de elementos que escoges (r):\t"<<endl;
+                             cin>>_Rtamano;
+                             if (_Rtamano>=0)
+                             {
+                                controlador3=1;
+                             }else
+                             {
+                               cout<<"Alerta el numero ingresado deber ser igual o mayor a cero"<<endl;
+                               controlador3=0;
+                               system("PAUSE");
+                             }
+                        } while (controlador3!=1);
+                      
+                       // llamando a metodo calcular permutacion sin repeticion
                 
+                      int resultado =  calcularPermutacionSinRepeticion(int _Nelementos, int _Rtamano);
+                      cout<<"El numero de permutaciones posibles es: "<<resultado<<endl;                
+            
                 break;
             case 2:
                 cout<<"-----------------------------------------------"<<endl;
@@ -121,4 +148,11 @@ int main(int argc, char const *argv[])
                 break;
             }
     return 0;
+}
+
+//Seccion de metodos
+
+//metodo para calcular permutaciones sin repeticion
+int calcularPermutacionSinRepeticion(int _Nelementos, int _Rtamano){
+     return _Nelementos+_Rtamano;
 }
