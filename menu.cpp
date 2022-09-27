@@ -21,10 +21,13 @@ int main(int argc, char const *argv[])
     int controlador=0;
     int opcion=0;
     // declaracion de variables de submenu por  cada caso
-    int controlador2=0;
-
+    // int controlador2=0;
+    // int subOpcion=0;
+    int _Nelementos=0;
+    int _Rtamano=0;
     // inicia ciclo do-while para  opciones principales    
-    
+
+    do
     {
         
         cout<<"----------------------------------------------"<<endl;
@@ -51,9 +54,10 @@ int main(int argc, char const *argv[])
         }else
         {
            cout<<" Opcion no valida, Selecione alguna de las opciones existente";
-           system("cls");
            controlador=0;
+           opcion=0;
            system("PAUSE");
+        //    _sleep(2000);
         }
 
     } while (controlador!=1);
@@ -63,10 +67,23 @@ int main(int argc, char const *argv[])
      switch (opcion)
             {
             case 1:
-                cout<<"------------------------------------------------"<<endl;
-                cout<<"----Seleciono Permunationces sin repeticion-----"<<endl;
-                cout<<"------------------------------------------------"<<endl;
-                cout<<endl;
+                // do
+                // {
+                    // if (subOpcion)
+                    // {
+                      cout<<"------------------------------------------------"<<endl;
+                      cout<<"----Seleciono Permunationces sin repeticion-----"<<endl;
+                      cout<<"------------------------------------------------"<<endl;
+                      cout<<endl;
+                      cout<<"Ingrese la cantidad de elementos N:\t"<<endl;
+                      cin>>_Nelementos;
+                      cout<<"Ingrese el tamaño del arreglo R:\t"<<endl;
+                      cin>>_Rtamano;
+
+                    // }
+                    
+                // } while (/* condition */);
+                
                 break;
             case 2:
                 cout<<"-----------------------------------------------"<<endl;
