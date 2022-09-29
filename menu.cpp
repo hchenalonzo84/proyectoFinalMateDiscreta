@@ -12,12 +12,15 @@
 #include <math.h>
 #include "factorial.h"
 #include "permutaciones.h"
+#include "combinaciones.h"
 
 //declaracion de variables y metodos globales
 int getFactorial(int _Nelementos);
 int calcularPermutacionSinRepeticion(int _Nelementos, int _Rtamanio);
 int calcularPermutacionConRepeticion(int _Nelementos, int _Rtamano);
 int permutacionSubConjuntoDiv(int _Nelementos, int _SubConjunto);
+int permutacionesCirculares(int _Nelementos);
+int combinacionesSinRepeticion(int _Nelementos,int _Rtamano);
 
 using namespace std;
 
@@ -33,6 +36,7 @@ int main(int argc, char const *argv[])
     int controlador3=0; // variable de control para no permitir  numeros negativos
     int controlador4=0; // variable de control para no permitir  numeros negativos
     int controlador5=0; // variable de control para no permitir  que N sea menor a R.
+    int controlador6=0; // variable de control para salir del sistema desde menu principal.
     int _Nelementos=0;  // variable para guardar la cantidad de elementos del conjutnto (n)
     int _Rtamano=0;     // variable para guardar  el tamaño del arreglo del conjunto (r)
     int resultado=0;
@@ -58,11 +62,12 @@ int main(int argc, char const *argv[])
         cout<<"---------SECCION DE COMBINACIONES-------------"<<endl;
         cout<<"--5. Combinaciones con repeticion-------------"<<endl;
         cout<<"--6. Combinaciones sin repeticion-------------"<<endl;
+        cout<<"--7. Salir del sistema------------------------"<<endl;
         cout<<"----------------------------------------------"<<endl;
         // leyendo y guardando opcion seleccionada
         cin>>opcion;
         // condicional que evalua la opcion seleccionada
-        if (opcion>=1 && opcion<=6)
+        if (opcion>=1 && opcion<=7)
         {
            controlador2=1;
         }else
@@ -265,12 +270,90 @@ int main(int argc, char const *argv[])
                 cout<<"----Seleciono Permunationces circulares-------"<<endl;
                 cout<<"----------------------------------------------"<<endl;
                 cout<<endl;
+                do
+                {
+                  cout<<"Ingrese numero elementos del conjunto (n):\t"<<endl;
+                  cin>>_Nelementos;
+                  if (_Nelementos>=0)
+                  {
+                    controlador3=1;
+                  }
+                  else
+                  {
+                     cout<<"Alerta el numero ingresado deber ser igual o mayor a cero"<<endl;
+                     controlador3=0;
+                     system("PAUSE");
+                     cout<<endl;
+                  }
+                  
+                } while (controlador3!=1);
+                
+                resultado = permutacionesCirculares(_Nelementos);
+                cout<<"El numero de permutaciones posibles es: "<<resultado<<endl;
+                  cout<<endl;
+                  cout<<"si desea realizar otra operacion ingrese (si/no)";
+                  cin>>subOpcion;
+                    if (subOpcion=="si")
+                    {
+                        controlador=0;
+                    }else
+                    {
+                        cout<<endl;
+                        cout<<"saliendo del sistema de calculo.....";
+                        exit(0);
+                    }
                 break;
             case 5:
                 cout<<"-----------------------------------------------"<<endl;
                 cout<<"----Seleciono Combinaciones sin repeticion-----"<<endl;
                 cout<<"-----------------------------------------------"<<endl;
                 cout<<endl;
+                do
+                {
+                  cout<<"Ingrese numero elementos del conjunto (n):\t"<<endl;
+                  cin>>_Nelementos;
+                  if (_Nelementos>0)
+                  {
+                    controlador3=1;
+                  }
+                  else
+                  {
+                     cout<<"Alerta el numero ingresado deber ser mayor a cero"<<endl;
+                     controlador3=0;
+                     system("PAUSE");
+                     cout<<endl;
+                  }
+                } while (controlador3!=1);
+                do
+                {
+                  cout<<"Ingrese numero de elementos que escoges (r):\t"<<endl;
+                   cin>>_Rtamano;
+                   if (_Rtamano>=0)
+                    {
+                         controlador4=1;
+                    }else
+                    {
+                        cout<<"Alerta el numero ingresado deber ser igual o mayor a cero"<<endl;
+                        controlador4=0;
+                        system("PAUSE");
+                        cout<<endl;
+                    }
+                } while (controlador4!=1);
+
+                 resultado = combinacionesSinRepeticion(_Nelementos,_Rtamano);
+                 cout<<"El numero de combinaciones posibles es: "<<resultado<<endl;
+                 cout<<endl;
+                 cout<<"si desea realizar otra operacion ingrese (si/no)";
+                 cin>>subOpcion;
+                    if (subOpcion=="si")
+                    {
+                        controlador=0;
+                    }else
+                    {
+                        cout<<endl;
+                        cout<<"saliendo del sistema de calculo.....";
+                        exit(0);
+                    }
                 break;
             case 6:
                 cout<<"-----------------------------------------------"<<endl;
@@ -278,7 +361,37 @@ int main(int argc, char const *argv[])
                 cout<<"-----------------------------------------------"<<endl;
                 cout<<endl;
                 break;
-            
+            case 7:
+                cout<<"-----------------------------------------------"<<endl;
+                do
+                {
+                cout<<"----¿Seguro que desenoa salir del sistema (si/no)?-----\t"<<endl;
+                cin>>subOpcion;
+                  if (subOpcion=="si")
+                  {
+                    cout<<endl;
+                    cout<<"saliendo del sistema de calculo.....";
+                    exit(0);
+                  }
+                  else if (subOpcion=="no")
+                  {
+                    controlador6=1;
+                    controlador=0;
+                  }
+                  else
+                  {
+                    cout<<"Opcion no valida"<<endl;
+                    cout<<endl;
+                    controlador6=0;
+                    subOpcion="";
+                  
+                  
+                } while (controlador6!=1);
+                
+                cout<<"-----------------------------------------------"<<endl;
+                cout<<endl;
+                break;
+
             default:
                 cout<<"Error en switch case";
                 break;

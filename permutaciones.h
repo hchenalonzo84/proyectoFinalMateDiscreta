@@ -77,3 +77,15 @@ int permutacionSubConjuntoDiv(int _Nelementos, int _SubConjunto){
     resultado= resultadoArriba/resultadoAbajo;
     return resultado;
 }
+
+ // metodo para  calculo de permutaciones circulares
+ int permutacionesCirculares(int _Nelementos){
+    int factorialN=0;
+    int resta=0;
+    int resultado=0;
+
+    resta= (_Nelementos-1);
+    factorialN= getFactorial(resta);
+    resultado= factorialN;
+    return resultado;
+ }
