@@ -10,12 +10,14 @@
 #include <iostream>
 #include <stdlib.h>
 #include <math.h>
-
+#include "factorial.h"
+#include "permutaciones.h"
 
 //declaracion de variables y metodos globales
 int getFactorial(int _Nelementos);
 int calcularPermutacionSinRepeticion(int _Nelementos, int _Rtamanio);
 int calcularPermutacionConRepeticion(int _Nelementos, int _Rtamano);
+int permutacionSubConjuntoDiv(int _Nelementos, int _SubConjunto);
 
 using namespace std;
 
@@ -34,7 +36,7 @@ int main(int argc, char const *argv[])
     int _Nelementos=0;  // variable para guardar la cantidad de elementos del conjutnto (n)
     int _Rtamano=0;     // variable para guardar  el tamaño del arreglo del conjunto (r)
     int resultado=0;
-
+    int _SubConjunto=0;
     //inicio de ciclo para repterir todo el programa desde el inio o salir
   do
   {     
@@ -135,7 +137,8 @@ int main(int argc, char const *argv[])
                               {
                                   cout<<endl;
                                   cout<<"saliendo del sistema de calculo.....";
-                                  controlador=1;
+                                  // controlador=1;
+                                  exit(0);
                               }
                         }else
                         {
@@ -201,7 +204,7 @@ int main(int argc, char const *argv[])
                     {
                         cout<<endl;
                         cout<<"saliendo del sistema de calculo.....";
-                        controlador=1;
+                        exit(0);
                     }
                 break;
             case 3:
@@ -209,6 +212,53 @@ int main(int argc, char const *argv[])
                 cout<<"-----Seleciono Permunationces en subconjuntos divididos-----"<<endl;
                 cout<<"------------------------------------------------------------"<<endl;
                 cout<<endl;
+                do
+                {
+                  cout<<"Ingrese numero elementos del conjunto (n):\t"<<endl;
+                  cin>>_Nelementos;            
+                  if (_Nelementos>=0)
+                  {
+                    controlador3=1;
+                  }
+                  else
+                  {
+                    cout<<"Alerta el numero ingresado deber ser igual o mayor a cero"<<endl;
+                    controlador3=0;
+                    system("PAUSE");
+                    cout<<endl;
+                  }            
+                } while (controlador3!=1);
+                do
+                {
+                  cout<<"Ingrese numero de subconjuntos:\t"<<endl;
+                  cin>>_SubConjunto;            
+                  if (_SubConjunto>=0)
+                  {
+                    controlador4=1;
+                  }
+                  else
+                  {
+                    cout<<"Alerta el numero ingresado deber ser igual o mayor a cero"<<endl;
+                    controlador4=0;
+                    system("PAUSE");
+                    cout<<endl;
+                  }            
+                } while (controlador4!=1);
+                // llamando a metodo para calcular permutacion con subconjuntos divididos
+                resultado = permutacionSubConjuntoDiv(_Nelementos, _SubConjunto);
+                 cout<<"El numero de permutaciones posibles es: "<<resultado<<endl;
+                  cout<<endl;
+                  cout<<"si desea realizar otra operacion ingrese (si/no)";
+                  cin>>subOpcion;
+                    if (subOpcion=="si")
+                    {
+                        controlador=0;
+                    }else
+                    {
+                        cout<<endl;
+                        cout<<"saliendo del sistema de calculo.....";
+                        exit(0);
+                    }
                 break;
             case 4:
                 cout<<"----------------------------------------------"<<endl;
@@ -238,46 +288,3 @@ int main(int argc, char const *argv[])
   return 0;
 }
 
-//Seccion de metodos
-
-//metodo pra calcular   el factorial de un numero
-int getFactorial(int numero) {
-    int i=numero;
-    int factorial=1;
-    int acumulado=1;
-    
-    while(i>=1) {
-        factorial = acumulado*i;           
-        acumulado=factorial;
-       i--;  
-    }
-    
-    return factorial;
-    
-}
-
-
-//metodo para calcular permutaciones sin repeticion
-int calcularPermutacionSinRepeticion(int _Nelementos, int _Rtamano){
-    int factorialN=0;
-    int resta=0;
-    int factorialResta=0;
-    int resultado=0;
-    
-    factorialN= getFactorial(_Nelementos);
-    resta= _Nelementos-_Rtamano;
-    factorialResta = getFactorial(resta);
-    
-    resultado=factorialN/factorialResta;
-    
-    return resultado;
-}
-
-//metodo para calcular permutaciones con repeticion
-int calcularPermutacionConRepeticion(int _Nelementos, int _Rtamano){
-    int resultado=0;
-    
-    resultado = pow(_Nelementos,_Rtamano);
-       
-    return resultado;
-}
