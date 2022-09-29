@@ -1,8 +1,7 @@
-
-int getFactorial(int numero) {
-    int i=numero;
-    int factorial=1;
-    int acumulado=1;
+double getFactorial(double numero) {
+    double i=numero;
+    double factorial=1;
+    double acumulado=1;
     
     while(i>=1) {
         factorial = acumulado*i;           

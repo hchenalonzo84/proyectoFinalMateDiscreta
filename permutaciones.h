@@ -8,11 +8,11 @@ using namespace std;
 
 
 //metodo para calcular permutaciones sin repeticion
-int calcularPermutacionSinRepeticion(int _Nelementos, int _Rtamano){
-    int factorialN=0;
-    int resta=0;
-    int factorialResta=0;
-    int resultado=0;
+double calcularPermutacionSinRepeticion(double _Nelementos, double _Rtamano){
+    double factorialN=0;
+    double resta=0;
+    double factorialResta=0;
+    double resultado=0;
     
     factorialN= getFactorial(_Nelementos);
     resta= _Nelementos-_Rtamano;
@@ -24,8 +24,8 @@ int calcularPermutacionSinRepeticion(int _Nelementos, int _Rtamano){
 }
 
 //metodo para calcular permutaciones con repeticion
-int calcularPermutacionConRepeticion(int _Nelementos, int _Rtamano){
-    int resultado=0;
+double calcularPermutacionConRepeticion(double _Nelementos, double _Rtamano){
+    double resultado=0;
     
     resultado = pow(_Nelementos,_Rtamano);
        
@@ -34,13 +34,13 @@ int calcularPermutacionConRepeticion(int _Nelementos, int _Rtamano){
 
 // metodo para calcular permutaciones con subconjuntos divididos
 
-int permutacionSubConjuntoDiv(int _Nelementos, int _SubConjunto){
-    int resultadoArriba=0;
-    int resultadoAbajo=1;
+double permutacionSubConjuntoDiv(double _Nelementos, int _SubConjunto){
+    double resultadoArriba=0;
+    double resultadoAbajo=1;
     int arreglo[_SubConjunto];
-    int resultado=0;
-    int acumulador=0;
-    int centinela=0;
+    double resultado=0;
+    double acumulador=0;
+    double centinela=0;
 
     // llamando a funcion factorial
     resultadoArriba = getFactorial(_Nelementos);
@@ -79,10 +79,10 @@ int permutacionSubConjuntoDiv(int _Nelementos, int _SubConjunto){
 }
 
  // metodo para  calculo de permutaciones circulares
- int permutacionesCirculares(int _Nelementos){
-    int factorialN=0;
-    int resta=0;
-    int resultado=0;
+ double permutacionesCirculares(double _Nelementos){
+    double factorialN=0;
+    double resta=0;
+    double resultado=0;
 
     resta= (_Nelementos-1);
     factorialN= getFactorial(resta);
