@@ -33,7 +33,6 @@ double combinacionesSinRepeticion(double _Nelementos,double _Rtamano){
     operacion1=_Nelementos+_Rtamano-1;
     resultado1= operacion1;
     resultado= combinacionesSinRepeticion(resultado1,_Rtamano);
-    cout<<"operacion1:"<<resultado<<endl;
-
+    
     return resultado;
  }

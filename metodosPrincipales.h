@@ -4,19 +4,19 @@
 using namespace std;
 
    int controlador=0; // variable de control apra menu principal de opciones
-    int opcion=0; // varibale para guardar la opcion seleccionada por el usuario
+   int controlador2=0; // variable de control para no permitir  numeros negativos
+   int opcion=0; // varibale para guardar la opcion seleccionada por el usuario
     
     // declaracion de variables de submenu por  cada caso
-    int controlador2=0; // variable de control para no permitir  numeros negativos
-    int controlador3=0; // variable de control para no permitir  numeros negativos
-    int controlador4=0; // variable de control para no permitir  numeros negativos
-    int controlador5=0; // variable de control para no permitir  que N sea menor a R.
-    int controlador6=0; // variable de control para salir del sistema desde menu principal.
-    double _Nelementos=0;  // variable para guardar la cantidad de elementos del conjutnto (n)
-    double _Rtamano=0;     // variable para guardar  el tamaño del arreglo del conjunto (r)
-    double resultado=0;    // variable que guarda resultado  que devuelven los metodos
-    int _SubConjunto=0;  // variable que guarda el tamaño del arreglo de los subconjutnos divididos
-    string subOpcion=""; // variable que guarda opcion si salir o no del sistema
+   int controlador3=0; // variable de control para no permitir  numeros negativos
+   int controlador4=0; // variable de control para no permitir  numeros negativos
+   int controlador5=0; // variable de control para no permitir  que N sea menor a R.
+   int controlador6=0; // variable de control para salir del sistema desde menu principal.
+   double _Nelementos=0;  // variable para guardar la cantidad de elementos del conjutnto (n)
+   double _Rtamano=0;     // variable para guardar  el tamaño del arreglo del conjunto (r)
+   double resultado=0;    // variable que guarda resultado  que devuelven los metodos
+   int _SubConjunto=0;  // variable que guarda el tamaño del arreglo de los subconjutnos divididos
+   string subOpcion=""; // variable que guarda opcion si salir o no del sistema
     //inicio de ciclo para repterir todo el programa desde el inio o salir
 
 // metodo para caso 1- permutaciones sin repeticion
@@ -28,7 +28,7 @@ double permutacionSR(){
                       //ciclo de control  para evitar que N sea mayor a R
                       do
                       {
-                      //ciclo de control  para evitar ingresar numeros negativos en (n)
+                       //ciclo de control  para evitar ingresar numeros negativos en (n)
                        do
                         {
                              cout<<"Ingrese numero elementos del conjunto (n):\t"<<endl;
@@ -43,9 +43,9 @@ double permutacionSR(){
                                system("PAUSE");
                                cout<<endl;
                              }
-                        } while (controlador3!=1);
-                       //ciclo de control  para evitar ingresar numeros negativos(r)
-                       do
+                         } while (controlador3!=1);
+                         //ciclo de control  para evitar ingresar numeros negativos(r)
+                        do
                         {
                              cout<<"Ingrese numero de elementos que escoges (r):\t"<<endl;
                              cin>>_Rtamano;
@@ -68,34 +68,35 @@ double permutacionSR(){
                               resultado =  calcularPermutacionSinRepeticion(_Nelementos,_Rtamano);
                               cout<<"El numero de permutaciones posibles es: "<<resultado<<endl;
                               cout<<endl;
+                              // ciclo para preguntar si quiero  otra operacion o salir del sistema
                             do
-                    {                      
-                      cout<<"si desea realizar otra operacion ingrese (si/no)";
-                      cin>>subOpcion;
-                      if (subOpcion=="si")
-                       {
-                          controlador6=1;
-                          controlador5=1;
-                          controlador=0;
-                       }else if (subOpcion=="no")
-                       {
-                          cout<<endl;
-                          cout<<"saliendo del sistema de calculo.....";
-                          exit(0);
-                       }else                       
-                       {
-                        cout<<endl;
-                        cout<<"Opcion no valida";
-                        subOpcion=="";
-                        controlador6=0;
-                       }
-                    } while (controlador6!=1);
-                        }else
-                        {
+                              {                      
+                                cout<<"si desea realizar otra operacion ingrese (si/no)";
+                                cin>>subOpcion;
+                                if (subOpcion=="si")
+                                {
+                                    controlador6=1;
+                                    controlador5=1;
+                                    controlador=0;
+                                }else if (subOpcion=="no")
+                                {
+                                    cout<<endl;
+                                    cout<<"saliendo del sistema de calculo.....";
+                                    exit(0);
+                                }else                       
+                                {
+                                  cout<<endl;
+                                  cout<<"Opcion no valida";
+                                  subOpcion=="";
+                                  controlador6=0;
+                                }
+                              } while (controlador6!=1);
+                         }else
+                         {
                             cout<<"Advertencia: N  deber ser mayor o igual a R:";
                             cout<<"\n\n";
                             controlador5=0;
-                        }
+                         }
                       } while (controlador5!=1);  
   return 0;
 }
