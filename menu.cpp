@@ -4,17 +4,20 @@
   CREACION Y DISEÑO  DE PROGRAMA:
                                  Hugo Rolando Chenal Alonzo -- 4090-12-3918.
                                  Androws Israel Bin Tun -- 0902-19-11196.
-                                 pedro
+                                 
    
 */
 #include <iostream>
 #include <stdlib.h>
 #include <math.h>
 #include <string>
+#include <Windows.h>
+#include <stdio.h>
 #include "factorial.h"
 #include "permutaciones.h"
 #include "combinaciones.h"
 #include "metodosPrincipales.h"
+
 
 //declaracion de variables y metodos globales
 
@@ -26,6 +29,7 @@ double permutacionCIR();
 double combinacionCR();
 double combinacionSR();
 int salir();
+
 
 //metodos secundarios
 double getFactorial(double _Nelementos);
@@ -55,13 +59,39 @@ int main(int argc, char const *argv[])
     double resultado=0;    // variable que guarda resultado  que devuelven los metodos
     int _SubConjunto=0;  // variable que guarda el tamaño del arreglo de los subconjutnos divididos
     string subOpcion=""; // variable que guarda opcion si salir o no del sistema
+    
+
     //inicio de ciclo para repterir todo el programa desde el inio o salir
   do
   {     
     // inicia ciclo do-while  para control opciones principales  
     do
-    {
+    {  
+        // arreglo bidimensional para mostrar logo UMG
+        int matriz[7][30]={
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,1,0,0,1,1,0,1,1,1,1,0},
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,1,1,0,1,0,1,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,1,0,1,0,1,1,0},
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,1,0,1,0,0,1,0},
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,1,0,1,1,1,1,0},
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        };
         
+        // ciclo para recorrer las filas del arreglo
+        for (int i = 0; i < 7; i++)
+        {    
+            //ciclo para recorrer columnas del arreglo
+            for (int j = 0; j < 30; j++)
+            {
+            // condicional que evaluar cuando hay 1 en cada fila y columna   y lo mande a imprimir en consola
+            if (matriz[i][j]==1) cout<<char(219), Sleep(10); 
+            else  cout<<" ";      // caso contrario solo imprime un espacio 
+            }
+             cout<<endl; //saldo de linea al terminar de leer cada fila
+             Sleep(30);
+        } 
+
         cout<<"----------------------------------------------"<<endl;
         cout<<"-      Bienvendio seleccione una opcion      -"<<endl;
         cout<<"----------------------------------------------"<<endl;

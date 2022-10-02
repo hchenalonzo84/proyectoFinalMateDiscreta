@@ -80,9 +80,11 @@ double permutacionSR(){
                                     controlador=0;
                                 }else if (subOpcion=="no")
                                 {
-                                    cout<<endl;
-                                    cout<<"saliendo del sistema de calculo.....";
-                                    exit(0);
+                                       cout<<endl;
+                                       cout<<"-----------saliendo del sistema de calculo.....";
+                                       Sleep(1000);// funcion que detiene el programa por 300 ms
+                                       system("cls"); // funcion que limpia la consola
+                                       exit(0);
                                 }else                       
                                 {
                                   cout<<endl;
@@ -157,9 +159,11 @@ double permutacionCR(){
                           controlador=0;
                        }else if (subOpcion=="no")
                        {
-                          cout<<endl;
-                          cout<<"saliendo del sistema de calculo.....";
-                          exit(0);
+                             cout<<endl;
+                             cout<<"-----------saliendo del sistema de  calculo.....";
+                             Sleep(1000);// funcion que detiene el programa por 300 ms
+                             system("cls"); // funcion que limpia la consola
+                             exit(0);
                        }else                       
                        {
                         cout<<endl;
@@ -223,9 +227,11 @@ double permutacionSCD(){
                           controlador=0;
                        }else if (subOpcion=="no")
                        {
-                          cout<<endl;
-                          cout<<"saliendo del sistema de calculo.....";
-                          exit(0);
+                             cout<<endl;
+                             cout<<"-----------saliendo del sistema de calculo.....";
+                             Sleep(1000);// funcion que detiene el programa por 300 ms
+                             system("cls"); // funcion que limpia la consola
+                             exit(0);
                        }else                       
                        {
                         cout<<endl;
@@ -272,9 +278,11 @@ double permutacionCIR(){
                           controlador=0;
                        }else if (subOpcion=="no")
                        {
-                          cout<<endl;
-                          cout<<"saliendo del sistema de calculo.....";
-                          exit(0);
+                             cout<<endl;
+                             cout<<"-----------saliendo del sistema de calculo.....";
+                             Sleep(1000);// funcion que detiene el programa por 300 ms
+                             system("cls"); // funcion que limpia la consola
+                             exit(0);
                        }else                       
                        {
                         cout<<endl;
@@ -359,9 +367,11 @@ double combinacionCR(){
                           controlador=0;
                        }else if (subOpcion=="no")
                        {
-                          cout<<endl;
-                          cout<<"saliendo del sistema de calculo.....";
-                          exit(0);
+                             cout<<endl;
+                             cout<<"-----------saliendo del sistema de calculo.....";
+                             Sleep(1000);// funcion que detiene el programa por 300 ms
+                             system("cls"); // funcion que limpia la consola
+                             exit(0);
                        }else                       
                        {
                         cout<<endl;
@@ -424,9 +434,11 @@ double combinacionSR(){
                           controlador=0;
                        }else if (subOpcion=="no")
                        {
-                          cout<<endl;
-                          cout<<"saliendo del sistema de calculo.....";
-                          exit(0);
+                           cout<<endl;
+                           cout<<"-----------saliendo del sistema de calculo.....";
+                           Sleep(1000);// funcion que detiene el programa por 300 ms
+                           system("cls"); // funcion que limpia la consola
+                           exit(0);
                        }else                       
                        {
                         cout<<endl;
@@ -447,7 +459,9 @@ int salir(){
                   if (subOpcion=="si")
                   {
                     cout<<endl;
-                    cout<<"saliendo del sistema de calculo.....";
+                    cout<<"-----------saliendo del sistema de calculo.....";
+                    Sleep(1000);// funcion que detiene el programa por 300 ms
+                    system("cls"); // funcion que limpia la consola
                     exit(0);
                   }
                   else if (subOpcion=="no")
