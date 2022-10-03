@@ -21,6 +21,7 @@ using namespace std;
 
 // metodo para caso 1- permutaciones sin repeticion
 double permutacionSR(){
+                      system("cls");
                       cout<<"------------------------------------------------"<<endl;
                       cout<<"----Seleciono Permunationces sin repeticion-----"<<endl;
                       cout<<"------------------------------------------------"<<endl;
@@ -78,6 +79,8 @@ double permutacionSR(){
                                     controlador6=1;
                                     controlador5=1;
                                     controlador=0;
+                                    Sleep(1000);
+                                    system("cls");
                                 }else if (subOpcion=="no")
                                 {
                                        cout<<endl;
@@ -105,7 +108,8 @@ double permutacionSR(){
 
 // metodo para caso 2- permutaciones con repeticion
 double permutacionCR(){
-               cout<<"-----------------------------------------------"<<endl;
+                system("cls");
+                cout<<"-----------------------------------------------"<<endl;
                 cout<<"----Seleciono Permunationces con repeticion-----"<<endl;
                 cout<<"------------------------------------------------"<<endl;
                 cout<<endl;
@@ -157,6 +161,8 @@ double permutacionCR(){
                        {
                           controlador6=1;
                           controlador=0;
+                          Sleep(1000);
+                          system("cls");
                        }else if (subOpcion=="no")
                        {
                              cout<<endl;
@@ -177,6 +183,7 @@ double permutacionCR(){
 
 //metodo para caso 3- permutaciones con subconjuntos divididos
 double permutacionSCD(){
+                system("cls");
                 cout<<"------------------------------------------------------------"<<endl;
                 cout<<"-----Seleciono Permunationces en subconjuntos divididos-----"<<endl;
                 cout<<"------------------------------------------------------------"<<endl;
@@ -225,6 +232,8 @@ double permutacionSCD(){
                        {
                           controlador6=1;
                           controlador=0;
+                          Sleep(1000);
+                          system("cls");
                        }else if (subOpcion=="no")
                        {
                              cout<<endl;
@@ -244,6 +253,7 @@ double permutacionSCD(){
 }
 // metotdo para caso 4- permutaciones circulares
 double permutacionCIR(){
+                system("cls");
                 cout<<"----------------------------------------------"<<endl;
                 cout<<"----Seleciono Permunationces circulares-------"<<endl;
                 cout<<"----------------------------------------------"<<endl;
@@ -276,6 +286,8 @@ double permutacionCIR(){
                        {
                           controlador6=1;
                           controlador=0;
+                          Sleep(1000);
+                          system("cls");
                        }else if (subOpcion=="no")
                        {
                              cout<<endl;
@@ -295,6 +307,7 @@ double permutacionCIR(){
 }
 //metodo para caso 5- cobinaciones con repeticion
 double combinacionCR(){
+                system("cls");
                 cout<<"-----------------------------------------------"<<endl;
                 cout<<"----Seleciono Combinaciones con repeticion-----"<<endl;
                 cout<<"-----------------------------------------------"<<endl;
@@ -365,6 +378,8 @@ double combinacionCR(){
                        {
                           controlador6=1;
                           controlador=0;
+                          Sleep(1000);
+                          system("cls");
                        }else if (subOpcion=="no")
                        {
                              cout<<endl;
@@ -385,7 +400,8 @@ double combinacionCR(){
 }
 //metodo para caso 6- combinaciones sin repeticion
 double combinacionSR(){
-    cout<<"-----------------------------------------------"<<endl;
+                system("cls");
+                cout<<"-----------------------------------------------"<<endl;
                 cout<<"----Seleciono Combinaciones sin repeticion-----"<<endl;
                 cout<<"-----------------------------------------------"<<endl;
                 cout<<endl;
@@ -432,6 +448,8 @@ double combinacionSR(){
                        {
                           controlador6=1;
                           controlador=0;
+                          Sleep(1000);
+                          system("cls");
                        }else if (subOpcion=="no")
                        {
                            cout<<endl;
@@ -451,7 +469,8 @@ double combinacionSR(){
 }
 //meotodo para caso 7- salir del sistema
 int salir(){
-    cout<<"-----------------------------------------------"<<endl;
+                system("cls");
+                cout<<"-----------------------------------------------"<<endl;
                 do
                 {
                 cout<<"---- ¿Seguro que desenoa salir del sistema (si/no)?-----\t"<<endl;
@@ -468,6 +487,8 @@ int salir(){
                   {
                     controlador6=1;
                     controlador=0;
+                    Sleep(1000);
+                    system("cls");
                   }
                   else
                   {
