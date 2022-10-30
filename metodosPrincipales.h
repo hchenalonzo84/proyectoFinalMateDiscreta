@@ -22,9 +22,9 @@ using namespace std;
 // metodo para caso 1- permutaciones sin repeticion
 double permutacionSR(){
                       system("cls");
-                      cout<<"------------------------------------------------"<<endl;
-                      cout<<"----Seleciono Permunationces sin repeticion-----"<<endl;
-                      cout<<"------------------------------------------------"<<endl;
+                      cout<<"\t\t\t\t\t------------------------------------------------"<<endl;
+                      cout<<"\t\t\t\t\t----Seleciono Permunationces sin repeticion-----"<<endl;
+                      cout<<"\t\t\t\t\t------------------------------------------------"<<endl;
                       cout<<endl;
                       //ciclo de control  para evitar que N sea mayor a R
                       do
@@ -32,14 +32,14 @@ double permutacionSR(){
                        //ciclo de control  para evitar ingresar numeros negativos en (n)
                        do
                         {
-                             cout<<"Ingrese numero elementos del conjunto (n):\t"<<endl;
+                             cout<<"\t\t\t\t\tIngrese numero elementos del conjunto (n):\t"<<endl;
                              cin>>_Nelementos;
                              if (_Nelementos>=0)
                              {
                                 controlador3=1;
                              }else
                              {
-                               cout<<"Alerta el numero ingresado deber ser igual o mayor a cero"<<endl;
+                               cout<<"\t\t\t\t\tAlerta el numero ingresado deber ser igual o mayor a cero"<<endl;
                                controlador3=0;
                                system("PAUSE");
                                cout<<endl;
@@ -48,14 +48,14 @@ double permutacionSR(){
                          //ciclo de control  para evitar ingresar numeros negativos(r)
                         do
                         {
-                             cout<<"Ingrese numero de elementos que escoges (r):\t"<<endl;
+                             cout<<"\t\t\t\t\tIngrese numero de elementos que escoges (r):\t"<<endl;
                              cin>>_Rtamano;
                              if (_Rtamano>=0)
                              {
                                 controlador4=1;
                              }else
                              {
-                               cout<<"Alerta el numero ingresado deber ser igual o mayor a cero"<<endl;
+                               cout<<"\t\t\t\t\tAlerta el numero ingresado deber ser igual o mayor a cero"<<endl;
                                controlador4=0;
                                system("PAUSE");
                                cout<<endl;
@@ -67,12 +67,12 @@ double permutacionSR(){
                         {
                               // llamando a metodo calcular permutacion sin repeticion
                               resultado =  calcularPermutacionSinRepeticion(_Nelementos,_Rtamano);
-                              cout<<"El numero de permutaciones posibles es: "<<resultado<<endl;
+                              cout<<"\t\t\t\t\tEl numero de permutaciones posibles es: "<<resultado<<endl;
                               cout<<endl;
                               // ciclo para preguntar si quiero  otra operacion o salir del sistema
                             do
                               {                      
-                                cout<<"si desea realizar otra operacion ingrese (si/no)";
+                                cout<<"\t\t\t\t\tsi desea realizar otra operacion ingrese (si/no)";
                                 cin>>subOpcion;
                                 if (subOpcion=="si")
                                 {
@@ -84,21 +84,21 @@ double permutacionSR(){
                                 }else if (subOpcion=="no")
                                 {
                                        cout<<endl;
-                                       cout<<"-----------saliendo del sistema de calculo.....";
+                                       cout<<"\t\t\t\t\t-----------saliendo del sistema de calculo.....";
                                        Sleep(1000);// funcion que detiene el programa por 300 ms
                                        system("cls"); // funcion que limpia la consola
                                        exit(0);
                                 }else                       
                                 {
                                   cout<<endl;
-                                  cout<<"Opcion no valida";
+                                  cout<<"\t\t\t\t\tOpcion no valida";
                                   subOpcion=="";
                                   controlador6=0;
                                 }
                               } while (controlador6!=1);
                          }else
                          {
-                            cout<<"Advertencia: N  deber ser mayor o igual a R:";
+                            cout<<"\t\t\t\t\tAdvertencia: N  deber ser mayor o igual a R:";
                             cout<<"\n\n";
                             controlador5=0;
                          }
@@ -109,14 +109,14 @@ double permutacionSR(){
 // metodo para caso 2- permutaciones con repeticion
 double permutacionCR(){
                 system("cls");
-                cout<<"-----------------------------------------------"<<endl;
-                cout<<"----Seleciono Permunationces con repeticion-----"<<endl;
-                cout<<"------------------------------------------------"<<endl;
+                cout<<"\t\t\t\t\t-----------------------------------------------"<<endl;
+                cout<<"\t\t\t\t\t----Seleciono Permunationces con repeticion-----"<<endl;
+                cout<<"\t\t\t\t\t------------------------------------------------"<<endl;
                 cout<<endl;
                 // ciclo de ontrol  para evitar ingresar numeros negativos en (n)
                 do
                 { 
-                  cout<<"Ingrese numero elementos del conjunto (n):\t"<<endl;
+                  cout<<"\t\t\t\t\tIngrese numero elementos del conjunto (n):\t"<<endl;
                   cin>>_Nelementos;            
                   if (_Nelementos>=0)
                   {
@@ -124,7 +124,7 @@ double permutacionCR(){
                   }
                   else
                   {
-                    cout<<"Alerta el numero ingresado deber ser igual o mayor a cero"<<endl;
+                    cout<<"\t\t\t\t\tAlerta el numero ingresado deber ser igual o mayor a cero"<<endl;
                     controlador3=0;
                     system("PAUSE");
                     cout<<endl;
@@ -133,7 +133,7 @@ double permutacionCR(){
                 //ciclo de control  para evitar ingresar numeros negativos(r)
                 do
                 { 
-                  cout<<"Ingrese numero de elementos que escoges (r):\t"<<endl;
+                  cout<<"\t\t\t\t\tIngrese numero de elementos que escoges (r):\t"<<endl;
                   cin>>_Rtamano;
                   if (_Rtamano>=0)
                   {
@@ -141,7 +141,7 @@ double permutacionCR(){
                   }
                   else
                   {
-                    cout<<"Alerta el numero ingresado deber ser igual o mayor a cero"<<endl;
+                    cout<<"\t\t\t\t\tAlerta el numero ingresado deber ser igual o mayor a cero"<<endl;
                     controlador4=0;
                     system("PAUSE");
                     cout<<endl;
@@ -151,11 +151,11 @@ double permutacionCR(){
                 
                   // llamando a metodo calcular permutacion sin repeticion
                   resultado =  calcularPermutacionConRepeticion(_Nelementos,_Rtamano);
-                  cout<<"El numero de permutaciones posibles es: "<<resultado<<endl;
+                  cout<<"\t\t\t\t\tEl numero de permutaciones posibles es: "<<resultado<<endl;
                   cout<<endl;
                  do
                     {                      
-                      cout<<"si desea realizar otra operacion ingrese (si/no)";
+                      cout<<"\t\t\t\t\tsi desea realizar otra operacion ingrese (si/no)";
                       cin>>subOpcion;
                       if (subOpcion=="si")
                        {
@@ -166,14 +166,14 @@ double permutacionCR(){
                        }else if (subOpcion=="no")
                        {
                              cout<<endl;
-                             cout<<"-----------saliendo del sistema de  calculo.....";
+                             cout<<"\t\t\t\t\t-----------saliendo del sistema de  calculo.....";
                              Sleep(1000);// funcion que detiene el programa por 300 ms
                              system("cls"); // funcion que limpia la consola
                              exit(0);
                        }else                       
                        {
                         cout<<endl;
-                        cout<<"Opcion no valida";
+                        cout<<"\t\t\t\t\tOpcion no valida";
                         subOpcion=="";
                         controlador6=0;
                        }
@@ -184,13 +184,13 @@ double permutacionCR(){
 //metodo para caso 3- permutaciones con subconjuntos divididos
 double permutacionSCD(){
                 system("cls");
-                cout<<"------------------------------------------------------------"<<endl;
-                cout<<"-----Seleciono Permunationces en subconjuntos divididos-----"<<endl;
-                cout<<"------------------------------------------------------------"<<endl;
+                cout<<"\t\t\t\t\t------------------------------------------------------------"<<endl;
+                cout<<"\t\t\t\t\t-----Seleciono Permunationces en subconjuntos divididos-----"<<endl;
+                cout<<"\t\t\t\t\t------------------------------------------------------------"<<endl;
                 cout<<endl;
                 do
                 {
-                  cout<<"Ingrese numero elementos del conjunto (n):\t"<<endl;
+                  cout<<"\t\t\t\t\tIngrese numero elementos del conjunto (n):\t"<<endl;
                   cin>>_Nelementos;            
                   if (_Nelementos>=0)
                   {
@@ -198,7 +198,7 @@ double permutacionSCD(){
                   }
                   else
                   {
-                    cout<<"Alerta el numero ingresado deber ser igual o mayor a cero"<<endl;
+                    cout<<"\t\t\t\t\tAlerta el numero ingresado deber ser igual o mayor a cero"<<endl;
                     controlador3=0;
                     system("PAUSE");
                     cout<<endl;
@@ -206,7 +206,7 @@ double permutacionSCD(){
                 } while (controlador3!=1);
                 do
                 {
-                  cout<<"Ingrese numero de subconjuntos:\t"<<endl;
+                  cout<<"\t\t\t\t\tIngrese numero de subconjuntos:\t"<<endl;
                   cin>>_SubConjunto;            
                   if (_SubConjunto>=0)
                   {
@@ -214,7 +214,7 @@ double permutacionSCD(){
                   }
                   else
                   {
-                    cout<<"Alerta el numero ingresado deber ser igual o mayor a cero"<<endl;
+                    cout<<"\t\t\t\t\tAlerta el numero ingresado deber ser igual o mayor a cero"<<endl;
                     controlador4=0;
                     system("PAUSE");
                     cout<<endl;
@@ -222,11 +222,11 @@ double permutacionSCD(){
                 } while (controlador4!=1);
                 // llamando a metodo para calcular permutacion con subconjuntos divididos
                 resultado = permutacionSubConjuntoDiv(_Nelementos, _SubConjunto);
-                 cout<<"El numero de permutaciones posibles es: "<<resultado<<endl;
+                 cout<<"\t\t\t\t\tEl numero de permutaciones posibles es: "<<resultado<<endl;
                   cout<<endl;
                     do
                     {                      
-                      cout<<"si desea realizar otra operacion ingrese (si/no)";
+                      cout<<"\t\t\t\t\tsi desea realizar otra operacion ingrese (si/no)";
                       cin>>subOpcion;
                       if (subOpcion=="si")
                        {
@@ -237,14 +237,14 @@ double permutacionSCD(){
                        }else if (subOpcion=="no")
                        {
                              cout<<endl;
-                             cout<<"-----------saliendo del sistema de calculo.....";
+                             cout<<"\t\t\t\t\t-----------saliendo del sistema de calculo.....";
                              Sleep(1000);// funcion que detiene el programa por 300 ms
                              system("cls"); // funcion que limpia la consola
                              exit(0);
                        }else                       
                        {
                         cout<<endl;
-                        cout<<"Opcion no valida";
+                        cout<<"\t\t\t\t\tOpcion no valida";
                         subOpcion=="";
                         controlador6=0;
                        }
@@ -254,13 +254,13 @@ double permutacionSCD(){
 // metotdo para caso 4- permutaciones circulares
 double permutacionCIR(){
                 system("cls");
-                cout<<"----------------------------------------------"<<endl;
-                cout<<"----Seleciono Permunationces circulares-------"<<endl;
-                cout<<"----------------------------------------------"<<endl;
+                cout<<"\t\t\t\t\t----------------------------------------------"<<endl;
+                cout<<"\t\t\t\t\t----Seleciono Permunationces circulares-------"<<endl;
+                cout<<"\t\t\t\t\t----------------------------------------------"<<endl;
                 cout<<endl;
                 do
                 {
-                  cout<<"Ingrese numero elementos del conjunto (n):\t"<<endl;
+                  cout<<"\t\t\t\t\tIngrese numero elementos del conjunto (n):\t"<<endl;
                   cin>>_Nelementos;
                   if (_Nelementos>=0)
                   {
@@ -268,7 +268,7 @@ double permutacionCIR(){
                   }
                   else
                   {
-                     cout<<"Alerta el numero ingresado deber ser igual o mayor a cero"<<endl;
+                     cout<<"\t\t\t\t\tAlerta el numero ingresado deber ser igual o mayor a cero"<<endl;
                      controlador3=0;
                      system("PAUSE");
                      cout<<endl;
@@ -277,10 +277,10 @@ double permutacionCIR(){
                 } while (controlador3!=1);
                 
                 resultado = permutacionesCirculares(_Nelementos);
-                cout<<"El numero de permutaciones posibles es: "<<resultado<<endl;
+                cout<<"\t\t\t\t\tEl numero de permutaciones posibles es: "<<resultado<<endl;
                  do
                     {                      
-                      cout<<"si desea realizar otra operacion ingrese (si/no)";
+                      cout<<"\t\t\t\t\tsi desea realizar otra operacion ingrese (si/no)";
                       cin>>subOpcion;
                       if (subOpcion=="si")
                        {
@@ -291,14 +291,14 @@ double permutacionCIR(){
                        }else if (subOpcion=="no")
                        {
                              cout<<endl;
-                             cout<<"-----------saliendo del sistema de calculo.....";
+                             cout<<"\t\t\t\t\t-----------saliendo del sistema de calculo.....";
                              Sleep(1000);// funcion que detiene el programa por 300 ms
                              system("cls"); // funcion que limpia la consola
                              exit(0);
                        }else                       
                        {
                         cout<<endl;
-                        cout<<"Opcion no valida";
+                        cout<<"\t\t\t\t\tOpcion no valida";
                         subOpcion=="";
                         controlador6=0;
                        }
@@ -308,15 +308,15 @@ double permutacionCIR(){
 //metodo para caso 5- cobinaciones con repeticion
 double combinacionCR(){
                 system("cls");
-                cout<<"-----------------------------------------------"<<endl;
-                cout<<"----Seleciono Combinaciones con repeticion-----"<<endl;
-                cout<<"-----------------------------------------------"<<endl;
+                cout<<"\t\t\t\t\t-----------------------------------------------"<<endl;
+                cout<<"\t\t\t\t\t----Seleciono Combinaciones con repeticion-----"<<endl;
+                cout<<"\t\t\t\t\t-----------------------------------------------"<<endl;
                 cout<<endl;
                 do
                 {
                   do
                   {
-                    cout<<"Ingrese numero elementos del conjunto (n):\t"<<endl;
+                    cout<<"\t\t\t\t\tIngrese numero elementos del conjunto (n):\t"<<endl;
                     cin>>_Nelementos;
                     if (_Nelementos>=0)
                     {
@@ -324,7 +324,7 @@ double combinacionCR(){
                     }
                     else
                     {
-                      cout<<"Alerta el numero ingresado deber ser igual o mayor a cero"<<endl;
+                      cout<<"\t\t\t\t\tAlerta el numero ingresado deber ser igual o mayor a cero"<<endl;
                       controlador3=0;
                       system("PAUSE");
                       cout<<endl;
@@ -333,7 +333,7 @@ double combinacionCR(){
                   } while (controlador3!=1);
                   do
                   {
-                    cout<<"Ingrese numero de elementos que escoges (r):\t"<<endl;
+                    cout<<"\t\t\t\t\tIngrese numero de elementos que escoges (r):\t"<<endl;
                     cin>>_Rtamano;
                     if (_Rtamano>=0)
                     {
@@ -341,7 +341,7 @@ double combinacionCR(){
                     }
                     else
                     {
-                      cout<<"Alerta el numero ingresado deber ser igual o mayor a cero"<<endl;
+                      cout<<"\t\t\t\t\tAlerta el numero ingresado deber ser igual o mayor a cero"<<endl;
                       controlador4=0;
                       system("PAUSE");
                       cout<<endl;
@@ -351,7 +351,7 @@ double combinacionCR(){
                   // condicional que evalua si  n y r son iguales a cero 
                   if (_Nelementos==0 && _Rtamano==1)
                   {
-                     cout<<"Advertencia (n) no puede ser cero y (r) no pueden ser uno\n"<<endl;
+                     cout<<"\t\t\t\t\tAdvertencia (n) no puede ser cero y (r) no pueden ser uno\n"<<endl;
                      controlador5=0;
                   }
                   else if (_Nelementos==1 && _Rtamano==0)
@@ -359,7 +359,7 @@ double combinacionCR(){
                     controlador5=1;
                   }else if (_Nelementos==0 && _Rtamano==0)
                   {
-                    cout<<"Advertencia (n) y (r) no pueden ser cero al mismo tiempo\n"<<endl;
+                    cout<<"\t\t\t\t\tAdvertencia (n) y (r) no pueden ser cero al mismo tiempo\n"<<endl;
                     controlador5=0;
                   }else                  
                   {
@@ -368,11 +368,11 @@ double combinacionCR(){
                 } while (controlador5!=1);
                 
                 resultado= combinacionConRepeticion(_Nelementos,_Rtamano);
-                cout<<"El numero de combinaciones posibles es: "<<resultado<<endl;
+                cout<<"\t\t\t\t\tEl numero de combinaciones posibles es: "<<resultado<<endl;
                 cout<<endl;
                     do
                     {                      
-                      cout<<"si desea realizar otra operacion ingrese (si/no)";
+                      cout<<"\t\t\t\t\tsi desea realizar otra operacion ingrese (si/no)";
                       cin>>subOpcion;
                       if (subOpcion=="si")
                        {
@@ -383,14 +383,14 @@ double combinacionCR(){
                        }else if (subOpcion=="no")
                        {
                              cout<<endl;
-                             cout<<"-----------saliendo del sistema de calculo.....";
+                             cout<<"\t\t\t\t\t-----------saliendo del sistema de calculo.....";
                              Sleep(1000);// funcion que detiene el programa por 300 ms
                              system("cls"); // funcion que limpia la consola
                              exit(0);
                        }else                       
                        {
                         cout<<endl;
-                        cout<<"Opcion no valida";
+                        cout<<"\t\t\t\t\tOpcion no valida";
                         subOpcion=="";
                         controlador6=0;
                        }
@@ -401,13 +401,13 @@ double combinacionCR(){
 //metodo para caso 6- combinaciones sin repeticion
 double combinacionSR(){
                 system("cls");
-                cout<<"-----------------------------------------------"<<endl;
-                cout<<"----Seleciono Combinaciones sin repeticion-----"<<endl;
-                cout<<"-----------------------------------------------"<<endl;
+                cout<<"\t\t\t\t\t-----------------------------------------------"<<endl;
+                cout<<"\t\t\t\t\t----Seleciono Combinaciones sin repeticion-----"<<endl;
+                cout<<"\t\t\t\t\t-----------------------------------------------"<<endl;
                 cout<<endl;
                 do
                 {
-                  cout<<"Ingrese numero elementos del conjunto (n):\t"<<endl;
+                  cout<<"\t\t\t\t\tIngrese numero elementos del conjunto (n):\t"<<endl;
                   cin>>_Nelementos;
                   if (_Nelementos>0)
                   {
@@ -415,7 +415,7 @@ double combinacionSR(){
                   }
                   else
                   {
-                     cout<<"Alerta el numero ingresado deber ser mayor a cero"<<endl;
+                     cout<<"\t\t\t\t\tAlerta el numero ingresado deber ser mayor a cero"<<endl;
                      controlador3=0;
                      system("PAUSE");
                      cout<<endl;
@@ -423,14 +423,14 @@ double combinacionSR(){
                 } while (controlador3!=1);
                 do
                 {
-                  cout<<"Ingrese numero de elementos que escoges (r):\t"<<endl;
+                  cout<<"\t\t\t\t\tIngrese numero de elementos que escoges (r):\t"<<endl;
                    cin>>_Rtamano;
                    if (_Rtamano>=0)
                     {
                          controlador4=1;
                     }else
                     {
-                        cout<<"Alerta el numero ingresado deber ser igual o mayor a cero"<<endl;
+                        cout<<"\t\t\t\t\tAlerta el numero ingresado deber ser igual o mayor a cero"<<endl;
                         controlador4=0;
                         system("PAUSE");
                         cout<<endl;
@@ -438,11 +438,11 @@ double combinacionSR(){
                 } while (controlador4!=1);
 
                  resultado = combinacionesSinRepeticion(_Nelementos,_Rtamano);
-                 cout<<"El numero de combinaciones posibles es: "<<resultado<<endl;
+                 cout<<"\t\t\t\t\tEl numero de combinaciones posibles es: "<<resultado<<endl;
                  cout<<endl;
                     do
                     {                      
-                      cout<<"si desea realizar otra operacion ingrese (si/no)";
+                      cout<<"\t\t\t\t\tsi desea realizar otra operacion ingrese (si/no)";
                       cin>>subOpcion;
                       if (subOpcion=="si")
                        {
@@ -453,14 +453,14 @@ double combinacionSR(){
                        }else if (subOpcion=="no")
                        {
                            cout<<endl;
-                           cout<<"-----------saliendo del sistema de calculo.....";
+                           cout<<"\t\t\t\t\t-----------saliendo del sistema de calculo.....";
                            Sleep(1000);// funcion que detiene el programa por 300 ms
                            system("cls"); // funcion que limpia la consola
                            exit(0);
                        }else                       
                        {
                         cout<<endl;
-                        cout<<"Opcion no valida";
+                        cout<<"\t\t\t\t\tOpcion no valida";
                         subOpcion=="";
                         controlador6=0;
                        }
@@ -470,15 +470,15 @@ double combinacionSR(){
 //meotodo para caso 7- salir del sistema
 int salir(){
                 system("cls");
-                cout<<"-----------------------------------------------"<<endl;
+                cout<<"\t\t\t\t\t-----------------------------------------------"<<endl;
                 do
                 {
-                cout<<"---- ¿Seguro que desenoa salir del sistema (si/no)?-----\t"<<endl;
+                cout<<"\t\t\t\t\t---- ¿Seguro que desenoa salir del sistema (si/no)?-----\t"<<endl;
                 cin>>subOpcion;
                   if (subOpcion=="si")
                   {
                     cout<<endl;
-                    cout<<"-----------saliendo del sistema de calculo.....";
+                    cout<<"\t\t\t\t\t-----------saliendo del sistema de calculo.....";
                     Sleep(1000);// funcion que detiene el programa por 300 ms
                     system("cls"); // funcion que limpia la consola
                     exit(0);
@@ -492,13 +492,13 @@ int salir(){
                   }
                   else
                   {
-                    cout<<"Opcion no valida"<<endl;
+                    cout<<"\t\t\t\t\tOpcion no valida"<<endl;
                     cout<<endl;
                     subOpcion="";
                     controlador6=0;
                   }  
                 } while (controlador6!=1);                
-                cout<<"-----------------------------------------------"<<endl;
+                cout<<"\t\t\t\t\t-----------------------------------------------"<<endl;
                 cout<<endl;
    return 0;
 }

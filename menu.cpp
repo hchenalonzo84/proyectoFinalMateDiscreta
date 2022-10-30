@@ -42,6 +42,8 @@ double combinacionConRepeticion(double _Nelementos, double _Rtamano);
 
 using namespace std;
 
+
+
 int main(int argc, char const *argv[])
 {
     // declaracion de variables  locales main
@@ -67,22 +69,24 @@ int main(int argc, char const *argv[])
     // inicia ciclo do-while  para control opciones principales  
     do
     {  
+       
         // arreglo bidimensional para mostrar logo UMG
-        int matriz[7][30]={
-        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,1,0,0,1,1,0,1,1,1,1,0},
-        {0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,1,1,0,1,0,1,0,0,0,0},
-        {0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,1,0,1,0,1,1,0},
-        {0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,1,0,1,0,0,1,0},
-        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,1,0,1,1,1,1,0},
-        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        int matriz[7][31]={
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,1,0,0,1,1,0,1,1,1,1,0},
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,1,1,0,1,0,1,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,1,0,1,0,1,1,0},
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,1,0,1,0,0,1,0},
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,1,0,1,1,1,1,0},
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
         };
         
         // ciclo para recorrer las filas del arreglo
         for (int i = 0; i < 7; i++)
         {    
+            cout<<"\t\t\t\t\t";
             //ciclo para recorrer columnas del arreglo
-            for (int j = 0; j < 30; j++)
+            for (int j = 0; j < 31; j++)
             {
             // condicional que evaluar cuando hay 1 en cada fila y columna   y lo mande a imprimir en consola
             if (matriz[i][j]==1) cout<<char(219), Sleep(10); 
@@ -92,28 +96,29 @@ int main(int argc, char const *argv[])
              Sleep(30);
         } 
 
-        cout<<"----------------------------------------------"<<endl;
-        cout<<"-      Bienvendio seleccione una opcion      -"<<endl;
-        cout<<"----------------------------------------------"<<endl;
+        cout<<"\t\t\t\t\t----------------------------------------------"<<endl;
+        cout<<"\t\t\t\t\t-      Bienvendio seleccione una opcion      -"<<endl;
+        cout<<"\t\t\t\t\t----------------------------------------------"<<endl;
         cout<<endl;
-        cout<<"----------------------------------------------"<<endl;
-        cout<<"-          SECCION DE PERMUTACIONES          -"<<endl;
-        cout<<"----------------------------------------------"<<endl;
+        cout<<"\t\t\t\t\t----------------------------------------------"<<endl;
+        cout<<"\t\t\t\t\t-          SECCION DE PERMUTACIONES          -"<<endl;
+        cout<<"\t\t\t\t\t----------------------------------------------"<<endl;
         cout<<endl;
-        cout<<"--1. Permutaciones sin repeticion-------------"<<endl;
-        cout<<"--2. Permutaciones con repeticion-------------"<<endl;
-        cout<<"--3. Permutaciones en subconjuntos dividios---"<<endl;
-        cout<<"--4. Permutaciones circulares-----------------"<<endl;
+        cout<<"\t\t\t\t\t--1. Permutaciones sin repeticion-------------"<<endl;
+        cout<<"\t\t\t\t\t--2. Permutaciones con repeticion-------------"<<endl;
+        cout<<"\t\t\t\t\t--3. Permutaciones en subconjuntos dividios---"<<endl;
+        cout<<"\t\t\t\t\t--4. Permutaciones circulares-----------------"<<endl;
         cout<<endl;
-        cout<<"----------------------------------------------"<<endl;
-        cout<<"-          SECCION DE COMBINACIONES          -"<<endl;
-        cout<<"----------------------------------------------"<<endl;
+        cout<<"\t\t\t\t\t----------------------------------------------"<<endl;
+        cout<<"\t\t\t\t\t-          SECCION DE COMBINACIONES          -"<<endl;
+        cout<<"\t\t\t\t\t----------------------------------------------"<<endl;
         cout<<endl;
-        cout<<"--5. Combinaciones con repeticion-------------"<<endl;
-        cout<<"--6. Combinaciones sin repeticion-------------"<<endl;
-        cout<<"--7. Salir del sistema------------------------"<<endl;
-        cout<<"----------------------------------------------"<<endl;
+        cout<<"\t\t\t\t\t--5. Combinaciones con repeticion-------------"<<endl;
+        cout<<"\t\t\t\t\t--6. Combinaciones sin repeticion-------------"<<endl;
+        cout<<"\t\t\t\t\t--7. Salir del sistema------------------------"<<endl;
+        cout<<"\t\t\t\t\t----------------------------------------------"<<endl;
         // leyendo y guardando opcion seleccionada
+        
         cin>>opcion;
         // condicional que evalua la opcion seleccionada
         if (opcion>=1 && opcion<=7)
@@ -121,7 +126,7 @@ int main(int argc, char const *argv[])
            controlador2=1;
         }else
         {
-           cout<<" Opcion no valida, Selecione alguna de las opciones existente";
+           cout<<"\t\t\t\t\tOpcion no valida, Selecione alguna de las opciones existente";
            controlador2=0;
            opcion=0;
            system("PAUSE");
@@ -157,7 +162,7 @@ int main(int argc, char const *argv[])
                 break;
 
             default:
-                cout<<"Error en switch case";
+                cout<<"\t\t\t\t\tError en switch case";
                 break;
             }
 

@@ -49,7 +49,7 @@ double permutacionSubConjuntoDiv(double _Nelementos, int _SubConjunto){
     {
        for (int i = 0; i < _SubConjunto; i++)
        {
-        cout<<"Ingrese el valor del subconjunto #"<<i+1<<"\t"<<endl;
+        cout<<"\t\t\t\t\tIngrese el valor del subconjunto #"<<i+1<<"\t"<<endl;
         cin>>arreglo[i];
         acumulador=acumulador+arreglo[i];
        }
@@ -60,7 +60,7 @@ double permutacionSubConjuntoDiv(double _Nelementos, int _SubConjunto){
        }
        else
        {
-        cout<<" la sumatoria de los subconjutnos debe ser igual al total de elementos (n)"<<endl;
+        cout<<"\t\t\t\t\tla sumatoria de los subconjutnos debe ser igual al total de elementos (n)"<<endl;
         cout<<endl;
         acumulador=0;
         centinela=0;
