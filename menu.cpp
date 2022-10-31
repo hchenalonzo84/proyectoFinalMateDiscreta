@@ -140,7 +140,7 @@ int main(int argc, char const *argv[])
      switch (opcion)
             {
             case 1:
-                    permutacionSR();                 
+                   permutacionSR();                 
                 break;
             case 2:
                     permutacionCR();

@@ -405,6 +405,9 @@ double combinacionSR(){
                 cout<<"\t\t\t\t\t----Seleciono Combinaciones sin repeticion-----"<<endl;
                 cout<<"\t\t\t\t\t-----------------------------------------------"<<endl;
                 cout<<endl;
+                 //ciclo de control  para evitar que N sea mayor a R
+                      do
+                      {
                 do
                 {
                   cout<<"\t\t\t\t\tIngrese numero elementos del conjunto (n):\t"<<endl;
@@ -436,7 +439,9 @@ double combinacionSR(){
                         cout<<endl;
                     }
                 } while (controlador4!=1);
-
+                
+                 if (_Nelementos>=_Rtamano)
+                { 
                  resultado = combinacionesSinRepeticion(_Nelementos,_Rtamano);
                  cout<<"\t\t\t\t\tEl numero de combinaciones posibles es: "<<resultado<<endl;
                  cout<<endl;
@@ -447,6 +452,7 @@ double combinacionSR(){
                       if (subOpcion=="si")
                        {
                           controlador6=1;
+                          controlador5=1;
                           controlador=0;
                           Sleep(1000);
                           system("cls");
@@ -465,6 +471,14 @@ double combinacionSR(){
                         controlador6=0;
                        }
                     } while (controlador6!=1);
+                    
+                }else
+                {
+                       cout<<"\t\t\t\t\tAdvertencia: N  deber ser mayor o igual a R:";
+                       cout<<"\n\n";
+                       controlador5=0;
+                         }
+               } while (controlador5!=1);  
    return 0;
 }
 //meotodo para caso 7- salir del sistema
@@ -473,7 +487,7 @@ int salir(){
                 cout<<"\t\t\t\t\t-----------------------------------------------"<<endl;
                 do
                 {
-                cout<<"\t\t\t\t\t---- ¿Seguro que desenoa salir del sistema (si/no)?-----\t"<<endl;
+                cout<<"\t\t\t\t\t---- ¿Seguro que desea salir del sistema (si/no)?-----\t"<<endl;
                 cin>>subOpcion;
                   if (subOpcion=="si")
                   {
